@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perguntas Maya</title>
+    <!--Icone Aba Navegador-->
     <link rel="shortcut icon" type="imagex/png" href="chefe-de-cozinha.ico">
-
+    <!--Fonte Externa Online-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <!--Link css local-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,21 +31,18 @@
 
                 <h3>Formulário</h3>
                 <div class="forms-input">
-                    <label for="">Nome:</label>
-                    <input type="text" id="nome_pessoa">
+                    <label for="nome_pessoa">Nome:</label>
+                    <input name="nome_pessoa" type="text" id="nome_pessoa">
                 </div>
                 <div class="forms-input">
-                    <label for="">Pergunta:</label>
-                    <textarea name="" id="pergunta_pessoa" style="resize: vertical;"></textarea>
+                    <label for="pergunta_pessoa">Pergunta:</label>
+                    <textarea name="pergunta_pessoa" id="pergunta_pessoa" style="resize: vertical;"></textarea>
                 </div>
 
                 <button type="submit" id="bt-form" class="bt-form">Enviar</button>
-
             </form>
-
         </div>
-
     </div>
-    
+    <script type="module" src="dinamic.js"></script>
 </body>
 </html>
