@@ -31,6 +31,15 @@
         const btn = document.getElementById("bt-form")
         btn.disabled = true;
 
+        const nome = form.nome_pessoa.value.trim();
+        const pergunta = form.pergunta_pessoa.value.trim();
+
+        // Confere se algum dos dois campos está vazio ou só com espaços
+        if (!nome || !pergunta) {
+            alert("[SYSTEM]: Por favor, preencha seu nome e sua pergunta antes de enviar!");
+            return; // Interrompe a função aqui e não envia nada para o Firebase
+        }
+
         /* Tenta isso */
         try {
             /* Envia os dados do formulário para o banco de dados noSQL*/
@@ -43,14 +52,32 @@
             /* Reseta o formulário para nova pergunta*/
             form.reset();
 
-            alert("Sua pergunta foi enviada com sucesso.")
+            alert("[SYSTEM]: Sua pergunta foi enviada com sucesso.")
         }
         /* Se falhar aparece no console.log o erro */
         catch (err) {
-            console.error("Erro ao enviar:", err);
-            alert("Não foi possível enviar sua pergunta.");
+            console.error("[SYSTEM]: Erro ao enviar:", err);
+            alert("[SYSTEM]: Não foi possível enviar sua pergunta.");
         } 
         finally {
             btn.disabled = false;
         }
 })
+
+const audio = document.getElementById("musica-fundo");
+const btnMusica = document.querySelector(".play_musica");
+const iconeMusica = btnMusica.querySelector("img");
+
+audio.volume = 1; // Volume ambiente (20%)
+let tocando = false;
+
+btnMusica.addEventListener("click", () => {
+    if (tocando) {
+        audio.pause();
+        iconeMusica.src = "play.png";
+    } else {
+        audio.play();
+        iconeMusica.src = "stop.png"; 
+    }
+    tocando = !tocando;
+});

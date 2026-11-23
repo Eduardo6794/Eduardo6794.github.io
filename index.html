@@ -38,11 +38,16 @@
                     <label for="pergunta_pessoa">Pergunta:</label>
                     <textarea name="pergunta_pessoa" id="pergunta_pessoa" style="resize: vertical;"></textarea>
                 </div>
-
-                <button type="submit" id="bt-form" class="bt-form">Enviar</button>
+                <div class="forms-btns">
+                    <button type="submit" id="bt-form" class="bt-form">Enviar</button>
+                    <button type="button" class="play_musica">
+                        <img src="play.png" alt="" srcset="">
+                    </button>
+                </div>
             </form>
         </div>
     </div>
+    <audio id="musica-fundo" src="trilhasonora.mp3" loop preload="auto"></audio>
     <script type="module" src="dinamic.js"></script>
 </body>
 </html>
