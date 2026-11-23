@@ -37,6 +37,7 @@
         // Confere se algum dos dois campos está vazio ou só com espaços
         if (!nome || !pergunta) {
             alert("[SYSTEM]: Por favor, preencha seu nome e sua pergunta antes de enviar!");
+            btn.disabled = false;
             return; // Interrompe a função aqui e não envia nada para o Firebase
         }
 
