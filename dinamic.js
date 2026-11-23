@@ -20,6 +20,7 @@
     /* Initialize Firebase */
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+    const db = getFirestore(app); 
   
     const form = document.querySelector("form");
 
@@ -33,7 +34,7 @@
         /* Tenta isso */
         try {
             /* Envia os dados do formulário para o banco de dados noSQL*/
-            await addDoc(collection(maya_db, "fila_maya"), {
+            await addDoc(collection(db, "fila_maya"), {
             nome: form.nome_pessoa.value.trim(),
             pergunta: form.pergunta_pessoa.value.trim(),
             criado_em: serverTimestamp()
