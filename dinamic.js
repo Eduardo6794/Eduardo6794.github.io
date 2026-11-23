@@ -68,7 +68,7 @@ const audio = document.getElementById("musica-fundo");
 const btnMusica = document.querySelector(".play_musica");
 const iconeMusica = btnMusica.querySelector("img");
 
-audio.volume = 1; // Volume ambiente (20%)
+audio.volume = 0.3; // Volume ambiente (20%)
 let tocando = false;
 
 btnMusica.addEventListener("click", () => {
