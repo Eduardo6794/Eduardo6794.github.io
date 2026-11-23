@@ -42,7 +42,7 @@
             form.reset();
 
             alert("Sua pergunta foi enviada com sucesso.")
-        
+        }
         /* Se falhar aparece no console.log o erro */
         catch (err) {
             console.error("Erro ao enviar:", err);
@@ -51,4 +51,4 @@
         finally {
             btn.disabled = false;
         }
-    })
+})
