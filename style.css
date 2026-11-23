@@ -1,0 +1,162 @@
+:root {
+
+    --cor-fundo : #B3EBF2;
+    --cor-forms : #90D5FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: var(--cor-fundo);
+    min-width: 100%;
+    min-height: 100dvh;
+
+}
+
+.div-global {
+
+    width: 100%;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.apresentacao-maya {
+
+    width: 60%;
+    height: 100%;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+
+}
+
+.text-1 {
+    margin-bottom: 8px;
+}
+
+.text-3 {
+    margin-top: 4px;
+}
+
+.forms-maya {
+
+    width: 40%;
+    height: 100%;
+    
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+    background-color: var(--cor-forms);
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 9px;
+}
+
+.forms-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+textarea {
+    max-height: 200px;
+    border-radius: 4px;
+    border: 0;
+}
+
+input {
+    border-radius: 4px;
+    border: 0;
+}
+
+.bt-form {
+    width: 60%;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 8px;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 1px 1px 5px gray;
+    cursor: pointer;
+
+    transition: transform 1.5s ease, background-color 2s ease;
+    
+}
+
+.bt-form:hover {
+    background-color: var(--cor-fundo);
+    transform: scale(1.1);
+}
+
+.bt-form:active {
+    transform: scale(0.96) translateY(2px);
+    box-shadow: 0px 1px 2px gray;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    html {
+        width: 100%;
+    }
+
+    .div-global {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 100%;
+    }
+
+    .apresentacao-maya {
+        width: 100%;
+        height: auto;
+        overflow-wrap: break-word;
+        white-space: normal;
+        align-items: center;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .forms-maya {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-3 {
+        margin-top: 16px;
+    }
+
+
+}
