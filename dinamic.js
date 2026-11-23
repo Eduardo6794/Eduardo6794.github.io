@@ -33,7 +33,7 @@
         /* Tenta isso */
         try {
             /* Envia os dados do formulário para o banco de dados noSQL*/
-            await addDoc(collection(db, "fila_maya"), {
+            await addDoc(collection(maya_db, "fila_maya"), {
             nome: form.nome_pessoa.value.trim(),
             pergunta: form.pergunta_pessoa.value.trim(),
             criado_em: serverTimestamp()
